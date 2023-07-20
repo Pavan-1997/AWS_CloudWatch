@@ -60,7 +60,7 @@ Practical Use Cases of AWS CloudWatch:
 
 2. Goto CloudWatch from AWS Console -> Click on Metrics on the left pane -> Click on All metrics -> Click on EC2 -> Click on Per-Instance Metric -> Select CPUUtilization
 
-    ***By default AWS EC2 send metrics to CloudWatch every 5 mins***
+    **By default AWS EC2 send metrics to CloudWatch every 5 mins**
 
 
 3. Now go back to the EC2 -> Click on the instance that you have created -> Goto Monitoring tab under it -> Click on Manage detailed monitoring -> Select Enable -> Click on Confirm
@@ -68,24 +68,31 @@ Practical Use Cases of AWS CloudWatch:
     Now by doing the above step sends metrics to CloudWatch every 1 min
 
 
-4. Now go back to the EC2 terminal -> Create a file cpu_spike.py
+4. Now go back to the EC2 terminal -> Create a file cpu_spike.py (Present in repo - This script simulates the CPU Spike in EC2 Instance)
 
-    python3 - Verify whether we have python3 installed
+    Verify whether we have python3 installed using below and hit Ctrl+D to exit
+
+   ```
+   python3
+   ```
     
-    Run the script - python3 cpu_spike.py
+    Run the script using below
+   ``` 
+   python3 cpu_spike.py
+   ```
 
 
-5. Go back to the CloudWatch -> Click on Metrics on the left pane -> Click on All metrics -> Click on EC2 -> Click on Per-Instance Metric -> Filter with the instanceID ->  Select CPUUtilization
+6. Go back to the CloudWatch -> Click on Metrics on the left pane -> Click on All metrics -> Click on EC2 -> Click on Per-Instance Metric -> Filter with the instanceID ->  Select CPUUtilization
 
     To view the metrics immediately in CloudWatch -> Goto Graphed metrics -> Change the Statistic from Average to Maximum 
     
     In organization we use the Avergae parameter
 
 
-6. Now we need to act on this metric by creating Alarms -> In the CloudWatch -> Goto Alarms -> Click on Create alarm -> Click on Select metric -> Click on EC2 -> Click on Per-Instance Metric -> Filter with the instanceID ->  Select CPUUtilization -> Click on Select metric -> For demo select Statistic - Maximum -> Period - 1 minute -> Set threshold value in Conditions than... - 50 -> Click om Next -> Click on Create a new topic -> Give name to Create a new topic ... -> Give an email address -> Click on Create topic -> Click on Next -> Give name to Alarm name also if needed can give an alarm description -> Click on Next -> Click on Create alarm
+7. Now we need to act on this metric by creating Alarms -> In the CloudWatch -> Goto Alarms -> Click on Create alarm -> Click on Select metric -> Click on EC2 -> Click on Per-Instance Metric -> Filter with the instanceID ->  Select CPUUtilization -> Click on Select metric -> For demo select Statistic - Maximum -> Period - 1 minute -> Set threshold value in Conditions than... - 50 -> Click om Next -> Click on Create a new topic -> Give name to Create a new topic ... -> Give an email address -> Click on Create topic -> Click on Next -> Give name to Alarm name also if needed can give an alarm description -> Click on Next -> Click on Create alarm
 
 
-7. The alarm created shows as Insufficient data -> To activate this alarm goto to the mailbox of the email address provided in the above Step and confirm the subscription
+8. The alarm created shows as Insufficient data -> To activate this alarm goto to the mailbox of the email address provided in the above Step and confirm the subscription
 
 
-8. Now go back to the EC2 Instance -> Run the script again -> Now you should see the notification in email
+9. Now go back to the EC2 Instance -> Run the script again -> Now you should see the notification in email
