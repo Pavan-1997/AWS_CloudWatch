@@ -39,11 +39,8 @@ Practical Use Cases of AWS CloudWatch:
 ---
 # Simulating a CPU Spike using a Python script, checking the CPU Utilization and sending notification using AWS SNS 
 
-  
 
-***Reducing maintenance and increased security are the main factors for users to switch from On-Prem to Cloud^^^
-
- 
+***Reducing maintenance and increased security are the main factors for users to switch from On-Prem to Cloud***
 
 
 1. Now goto EC2 from AWS Console -> Click on Launch instance
@@ -54,7 +51,7 @@ Practical Use Cases of AWS CloudWatch:
     
     Instance type as t2.micro
     
-    Create a key pair if already present use existing one
+    Create a key pair if already present use the existing one
     
     Click on Launch instance
     
@@ -88,7 +85,7 @@ Practical Use Cases of AWS CloudWatch:
 6. Now we need to act on this metric by creating Alarms -> In the CloudWatch -> Goto Alarms -> Click on Create alarm -> Click on Select metric -> Click on EC2 -> Click on Per-Instance Metric -> Filter with the instanceID ->  Select CPUUtilization -> Click on Select metric -> For demo select Statistic - Maximum -> Period - 1 minute -> Set threshold value in Conditions than... - 50 -> Click om Next -> Click on Create a new topic -> Give name to Create a new topic ... -> Give an email address -> Click on Create topic -> Click on Next -> Give name to Alarm name also if needed can give an alarm description -> Click on Next -> Click on Create alarm
 
 
-7. The alarm created shows as Insufficient data -> To acitvate this alarm goto to the mailbox of the email address provided in the above Step and confirm the subscription
+7. The alarm created shows as Insufficient data -> To activate this alarm goto to the mailbox of the email address provided in the above Step and confirm the subscription
 
 
 8. Now go back to the EC2 Instance -> Run the script again -> Now you should see the notification in email
