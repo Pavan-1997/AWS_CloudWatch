@@ -38,3 +38,4 @@ Practical Use Cases of AWS CloudWatch:
 
 ---
 # Simulating a CPU Spike using a Python script, checking the CPU Utilization and sending notification using AWS SNS 
+
