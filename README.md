@@ -32,12 +32,12 @@ Practical Use Cases of AWS CloudWatch:
 
     Application Insights: Track application-specific metrics to monitor the performance of your applications and identify potential bottlenecks.
 
-    Log Analysis: Use CloudWatch Logs Insights to analyze log data, identify patterns, and troubleshoot issues in real-time.
+    Log Analysis: Use CloudWatch Logs Insights to analyze log data, identify patterns, and troubleshoot issues in real time.
 
     Billing and Cost Monitoring: CloudWatch can help you monitor your AWS billing and usage patterns, enabling you to optimize costs.
 
 ---
-# Simulating a CPU Spike using a Python script, checking the CPU Utilization and sending notification using AWS SNS 
+# Simulating a CPU Spike using a Python script, checking the CPU Utilization and sending notifications using AWS SNS 
 
 
 ***Reducing maintenance and increased security are the main factors for users to switch from On-Prem to Cloud***
@@ -60,7 +60,7 @@ Practical Use Cases of AWS CloudWatch:
 
 2. Goto CloudWatch from AWS Console -> Click on Metrics on the left pane -> Click on All metrics -> Click on EC2 -> Click on Per-Instance Metric -> Select CPUUtilization
 
-    **By default AWS EC2 send metrics to CloudWatch every 5 mins**
+    **By default AWS EC2 sends metrics to CloudWatch every 5 mins**
 
 
 3. Now go back to the EC2 -> Click on the instance that you have created -> Goto Monitoring tab under it -> Click on Manage detailed monitoring -> Select Enable -> Click on Confirm
@@ -86,7 +86,7 @@ Practical Use Cases of AWS CloudWatch:
 
     To view the metrics immediately in CloudWatch -> Goto Graphed metrics -> Change the Statistic from Average to Maximum 
     
-    In organization, we use the Avergae parameter
+    In organization, we use the Average parameter
 
 ![image](https://github.com/Pavan-1997/AWS_CloudWatch/assets/32020205/f71d947d-a13c-4e09-b328-bbcb8a0eeb01)
 
@@ -104,5 +104,9 @@ Practical Use Cases of AWS CloudWatch:
 Below is the CPU Utilization
 
 ![CPU](https://github.com/Pavan-1997/AWS_CloudWatch/assets/32020205/cbeba4a1-ac61-4953-9893-129cd40e95e2)
+
+Below is the alarm that got triggered when CPU Utlization > 50
+
+![image](https://github.com/Pavan-1997/AWS_CloudWatch/assets/32020205/b0eb1a32-7ddf-4223-bca0-ba3712aabe8b)
 
 
