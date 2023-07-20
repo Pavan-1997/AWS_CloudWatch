@@ -86,7 +86,9 @@ Practical Use Cases of AWS CloudWatch:
 
     To view the metrics immediately in CloudWatch -> Goto Graphed metrics -> Change the Statistic from Average to Maximum 
     
-    In organization we use the Avergae parameter
+    In organization, we use the Avergae parameter
+
+![image](https://github.com/Pavan-1997/AWS_CloudWatch/assets/32020205/f71d947d-a13c-4e09-b328-bbcb8a0eeb01)
 
 
 7. Now we need to act on this metric by creating Alarms -> In the CloudWatch -> Goto Alarms -> Click on Create alarm -> Click on Select metric -> Click on EC2 -> Click on Per-Instance Metric -> Filter with the instanceID ->  Select CPUUtilization -> Click on Select metric -> For demo select Statistic - Maximum -> Period - 1 minute -> Set threshold value in Conditions than... - 50 -> Click om Next -> Click on Create a new topic -> Give name to Create a new topic ... -> Give an email address -> Click on Create topic -> Click on Next -> Give name to Alarm name also if needed can give an alarm description -> Click on Next -> Click on Create alarm
@@ -96,3 +98,11 @@ Practical Use Cases of AWS CloudWatch:
 
 
 9. Now go back to the EC2 Instance -> Run the script again -> Now you should see the notification in email
+
+![image](https://github.com/Pavan-1997/AWS_CloudWatch/assets/32020205/afa366df-d452-418d-9a68-b975a5ba40cc)
+
+Below is the CPU Utilization
+
+![CPU](https://github.com/Pavan-1997/AWS_CloudWatch/assets/32020205/cbeba4a1-ac61-4953-9893-129cd40e95e2)
+
+
