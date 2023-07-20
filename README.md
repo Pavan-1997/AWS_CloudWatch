@@ -37,4 +37,4 @@ Practical Use Cases of AWS CloudWatch:
     Billing and Cost Monitoring: CloudWatch can help you monitor your AWS billing and usage patterns, enabling you to optimize costs.
 
 ---
-
+# Simulating a CPU Spike checking the CPU Utilization and sending notification using AWS SNS 
